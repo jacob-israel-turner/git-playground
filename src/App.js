@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
-import update from 'immutability-helper';
+import update from 'immutability-helper'
+import ab from 'autobind-decorator'
 
+@ab
 class App extends Component {
 
   constructor() {
