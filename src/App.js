@@ -1,21 +1,26 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
 
 class App extends Component {
+
+  constructor() {
+    super();
+    this.state = {
+      values: []
+    }
+  }
+
+  updateValue(index, {target: { value }}) {
+    console.log(value)
+  }
+
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <input value={this.state.values[0]} onChange={this.updateValue.bind(null, 0)} />
+        <input value={this.state.values[1]} onChange={this.updateValue.bind(null, 1)} />
       </div>
     );
   }
 }
 
-export default App;
+export default App
