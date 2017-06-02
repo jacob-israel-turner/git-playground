@@ -17,6 +17,7 @@ class App extends Component {
   }
 
   updateValue(index, {target: { value }}) {
+    console.log(`UPDATING VALUE AT ${index}`, value)
     this.setState(update(this.state, {
       values: {
         [index]: {$set: value}
@@ -31,6 +32,7 @@ class App extends Component {
   }
 
   handleOperatorChange({target: {value: index}}) {
+    console.log('SELECTING OPERATOR:', index)
     this.setState({operatorIndex: Number(index)})
   }
 
