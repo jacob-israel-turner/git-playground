@@ -37,11 +37,10 @@ class App extends Component {
     return (
       <div className="App">
         <input value={this.state.values[0]} onChange={this.updateValue.bind(this, 0)} />
-        <input value={this.state.values[1]} onChange={this.updateValue.bind(this, 1)} />
-
         <select value={this.state.operatorIndex} onChange={this.handleOperatorChange}>
           {this.renderOperators(operators)}
         </select>
+        <input value={this.state.values[1]} onChange={this.updateValue.bind(this, 1)} />
       </div>
     );
   }
