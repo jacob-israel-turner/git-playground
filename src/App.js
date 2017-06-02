@@ -37,6 +37,8 @@ class App extends Component {
   }
 
   equals() {
+    // Eval for laziness
+    // eslint-disable-next-line
     const result = eval(`${Number(this.state.values[0])} ${operators[this.state.operatorIndex]} ${Number(this.state.values[1])}`)
     console.log('RESULT', result)
     this.setState({result})
