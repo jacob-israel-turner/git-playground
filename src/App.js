@@ -12,6 +12,7 @@ class App extends Component {
     this.state = {
       values: ['', ''],
       operatorIndex: 0,
+      result: null,
     }
   }
 
@@ -33,6 +34,12 @@ class App extends Component {
     this.setState({operatorIndex: Number(index)})
   }
 
+  equals() {
+    const result = eval(`${Number(this.state.values[0])} ${operators[this.state.operatorIndex]} ${Number(this.state.values[1])}`)
+    console.log('RESULT', result)
+    this.setState({result})
+  }
+
   render() {
     return (
       <div className="App">
@@ -41,6 +48,9 @@ class App extends Component {
           {this.renderOperators(operators)}
         </select>
         <input value={this.state.values[1]} onChange={this.updateValue.bind(this, 1)} />
+        <button onClick={this.equals}> = </button>
+        <br />
+        {!!this.state.result && <p>{this.state.result}</p>}
       </div>
     );
   }
