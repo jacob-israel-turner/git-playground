@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "babel-preset-stage-3": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
     "immutability-helper": "^2.2.2",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
@@ -79,7 +79,7 @@
   "babel": {
     "presets": [
       "react-app",
-      "stage-3"
+      "stage-2"
     ]
   },
   "eslintConfig": {
